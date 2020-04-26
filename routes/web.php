@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
+Route::get('hello', 'HelloController@index');
+Route::post('hello', 'HelloController@post');
+=======
 
 
 
@@ -39,3 +43,4 @@ Route::get('hello/{msg?}', function($msg='no message') {
 EOF;
     return $html;
 });
+>>>>>>> master
