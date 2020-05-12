@@ -23,6 +23,13 @@ class HelloController extends Controller
         return view('hello.index', ['items' => $items]);
     }
 
+    public function show(Request $request)
+    {
+        $id = $request->id;
+        $item = DB::table('people')->where('id', $id)->first();
+        return view('hello.show', ['item' => $item]);
+    }
+
     public function add(Request $request)
     {
         return view('hello.add');
